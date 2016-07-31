@@ -1,0 +1,15 @@
+/.project
+/.settings/
+/Thumbs.db
+/**/Thumbs.db
+*.classpath
+*.iml
+*.project
+*.eml
+/.idea/
+/web.config
+node_modules/
+bower_components/
+npm-debug.log
+**/bundle.js
+*.js.map

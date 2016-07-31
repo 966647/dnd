@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+<body>
+<div id="drag1" src="img_logo.gif" draggable="true"
+     ondragstart="drag(event)" style="background-color: #0000f6; width: 336px; height: 69px"></div>
+<div id="div1" style="width: 400px; height: 100px; border: 1px solid black;" ondrop="drop(event)" ondragover="allowDrop(event)">
+</div>
+<div id="div2" style="width: 400px; height: 100px; border: 1px solid black;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
+</html>
